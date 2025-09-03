@@ -1,0 +1,51 @@
+.find-more {
+	padding: 4.6rem 2.5rem;
+	margin-bottom: 6rem;
+	background-color: $blue-950;
+	background-image: url(../images/bg-pattern-how-we-work-mobile.svg);
+	background-position: top right;
+	background-repeat: no-repeat;
+	text-align: center;
+
+	&__title {
+		margin-bottom: 2.5rem;
+		color: $gray-50;
+		font-size: 2.4rem;
+		font-weight: normal;
+		line-height: 100%;
+	}
+
+	button {
+		padding: 0.7rem 1.2rem;
+	}
+}
+
+@media (width >= 64rem) {
+	.find-more {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 4.3rem 3.5rem;
+		margin-bottom: 4rem;
+		background-image: url(../images/bg-pattern-how-we-work-desktop.svg);
+		background-position: bottom right;
+
+		&__title {
+			margin-bottom: 0;
+			width: 500px;
+			text-align: left;
+			font-size: 3.5rem;
+		}
+
+		button {
+			padding: 0.64rem 1.4rem;
+			font-size: 0.8rem;
+		}
+	}
+}
+
+@media (width >= 80rem) {
+	.find-more {
+		padding: 4.3rem 5rem;
+	}
+}

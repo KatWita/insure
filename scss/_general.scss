@@ -1,0 +1,123 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'DM Serif Display', serif;
+}
+
+body,
+button {
+	font-family: 'Karla', sans-serif;
+}
+
+ul {
+	list-style: none;
+}
+
+.lock-scroll {
+	overflow: hidden;
+}
+
+.line {
+	height: 1px;
+	width: 150px;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+
+	&--gray {
+		background-color: $gray-50;
+	}
+
+	&--blue {
+		background-color: $blue-500;
+	}
+}
+
+// btns
+.btn-view {
+	border: 2px solid $gray-50;
+	background: none;
+	padding: 0.6rem 1.8rem;
+	font-size: 0.9rem;
+
+	&--nav {
+		padding: 0.9rem 0;
+		margin-top: 2rem;
+	}
+}
+
+.nav__mobile,
+.btn-view--nav,
+.container {
+	width: 86vw;
+}
+
+.container,
+.nav__mobile {
+	margin: 0 auto;
+}
+
+.nav,
+.btn-view--nav {
+	font-size: 1.3rem;
+}
+
+.nav__links,
+.btn-view {
+	text-transform: uppercase;
+}
+
+.nav__link,
+.btn-view {
+	color: $gray-50;
+	letter-spacing: 2px;
+}
+
+@media (width >= 64rem) {
+	body {
+		overflow-x: hidden;
+	}
+
+	button {
+		cursor: pointer;
+	}
+
+	.container {
+		position: relative;
+	}
+
+	.line {
+		height: 1px;
+		width: 150px;
+		left: 0;
+		transform: translateX(0);
+	}
+
+	.btn-view {
+		transition: color 0.3s, background-color 0.3s;
+
+		&:hover {
+			background-color: $gray-50;
+			color: $blue-950;
+		}
+	}
+
+	.container {
+		max-width: 1110px;
+	}
+}

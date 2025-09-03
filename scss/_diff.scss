@@ -1,0 +1,66 @@
+.diff {
+	padding-bottom: 8.5rem;
+	margin-top: 9rem;
+	text-align: center;
+
+	&__title,
+	&__card-title {
+		color: $gray-950;
+		font-weight: normal;
+	}
+
+	&__title {
+		margin: 2rem 0 5rem;
+		font-size: 3rem;
+	}
+
+	&__card {
+		margin-bottom: 4rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__card-title {
+		margin: 2rem 0 1.2rem;
+		font-size: 1.7rem;
+	}
+
+	&__card-text {
+		margin: 0 auto;
+		max-width: 323px;
+		color: $gray-700;
+		line-height: 160%;
+	}
+}
+
+@media (width >= 64rem) {
+	.diff {
+		padding-bottom: 6rem;
+		margin-top: 19rem;
+		text-align: left;
+
+		&__title {
+			margin: 3rem 0 5rem;
+			font-size: 4.4rem;
+		}
+
+		&__content {
+			display: flex;
+			gap: 1.2rem;
+		}
+
+		&__card:first-child .diff__card-text {
+			max-width: 358px;
+		}
+
+		&__card:nth-child(2) .diff__card-text {
+			max-width: 359px;
+		}
+
+		&__card:last-child .diff__card-text {
+			max-width: 353px;
+		}
+	}
+}

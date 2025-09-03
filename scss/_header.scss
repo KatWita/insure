@@ -1,0 +1,186 @@
+.header {
+	position: relative;
+	padding: 80px 0 0;
+	background-color: $blue-950;
+	text-align: center;
+
+	.line {
+		display: none;
+	}
+
+	&__img {
+		display: block;
+		width: 100%;
+
+		&--desktop {
+			display: none;
+		}
+	}
+
+	&__content {
+		padding: 6rem 0 6.5rem;
+		position: relative;
+	}
+
+	&__title,
+	&__text {
+		color: $gray-50;
+	}
+
+	&__title {
+		font-size: 2.9rem;
+		font-weight: 400;
+		line-height: 100%;
+	}
+
+	&__text {
+		margin: 1rem 0 2rem;
+		line-height: 170%;
+	}
+
+	&__pattern--left,
+	&__pattern--right {
+		position: absolute;
+
+		&--desktop {
+			display: none;
+		}
+	}
+
+	&__pattern--left {
+		top: 0;
+		left: 0;
+	}
+
+	&__pattern--right {
+		right: 0;
+		bottom: -176px;
+	}
+}
+
+@media (width >= 64rem) {
+	.header {
+		padding: 78.78px 0 0;
+		text-align: left;
+
+		.line {
+			display: block;
+			margin-bottom: 4rem;
+		}
+
+		&__pattern--left,
+		&__pattern--right {
+			&--mobile {
+				display: none;
+			}
+
+			&--desktop {
+				display: block;
+			}
+		}
+
+		&__pattern--left {
+			top: 518px;
+		}
+
+		&__pattern--right {
+			right: -87px;
+			bottom: 189px;
+			z-index: 4;
+		}
+
+		&__img {
+			&--mobile {
+				display: none;
+			}
+
+			&--desktop {
+				position: absolute;
+				top: 0;
+				right: 0;
+				display: block;
+				width: 420px;
+			}
+		}
+
+		.container {
+			position: relative;
+		}
+
+		&__content {
+			padding: 6.5rem 0 8rem;
+		}
+
+		&__title,
+		&__text {
+			max-width: 440px;
+		}
+
+		&__title {
+			font-size: 3.7rem;
+		}
+
+		&__text {
+			margin: 1.5rem 0 2rem;
+		}
+
+		.btn-view {
+			padding: 0.6rem 1.4rem;
+		}
+	}
+}
+
+@media (width >= 71.875rem) {
+	.header {
+		&__pattern--left {
+			top: 527px;
+		}
+
+		&__pattern--right {
+			right: -61px;
+			bottom: 154px;
+		}
+
+		&__img--desktop {
+			width: 480px;
+		}
+
+		&__title,
+		&__text {
+			max-width: 480px;
+		}
+
+		&__title {
+			font-size: 4rem;
+		}
+	}
+}
+
+@media (width >= 80rem) {
+	.header {
+		&__pattern--right {
+			right: -71px;
+			bottom: 120px;
+		}
+
+		&__img--desktop {
+			width: 540px;
+		}
+
+		&__title,
+		&__text {
+			max-width: 540px;
+		}
+
+		&__title {
+			font-size: 4.5rem;
+		}
+	}
+}
+
+@media (width >= 90rem) {
+	.header__pattern--right {
+		right: 0;
+		bottom: 114px;
+	}
+}
